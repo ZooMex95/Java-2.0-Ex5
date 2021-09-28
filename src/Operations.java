@@ -12,9 +12,12 @@ public class Operations {
     }
 
     static double divide(double a, double b) {
-        if (b == 0) {
+        try{
+            return a/b;
+        } catch (ArithmeticException e) {
             System.out.println("Divide by zero");
             return 0;
-        } else return a / b;
+        }
+
     }
 }
