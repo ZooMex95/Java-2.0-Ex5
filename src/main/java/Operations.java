@@ -11,13 +11,10 @@ public class Operations {
         return a * b;
     }
 
-    static double divide(double a, double b) {
-        try{
-            return a/b;
-        } catch (ArithmeticException e) {
-            System.out.println("Divide by zero");
-            return 0;
-        }
+    static double divide(double a, double b) throws ArithmeticException {
+        if (b == 0) {
+            throw new ArithmeticException("Divide by zero");
+        } else return a/b;
 
     }
 }
